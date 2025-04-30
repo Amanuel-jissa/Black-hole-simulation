@@ -1,17 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-# Load and read the image
+# Load an image using OpenCV
 image_path = "/Users/perfectoid/Downloads/milkyway-3.jpg"
 galaxy = cv2.imread(image_path)
+#Convert it from BGR to RGB
 galaxy = cv2.cvtColor(galaxy, cv2.COLOR_BGR2RGB)
 # Gets the image size
 H, W, _ = galaxy.shape
-# M is the mass of the Black hole (affects the bending strength)
+# Define the mass M and black hole center coordinates
 M = W // 10.0
 # Location of the Black hole
 center_x, center_y = W // 2, H // 2
-# By creating X and Y we get a grid of coordinates
+# Create coordinate grids X, Y
 X, Y = np.meshgrid(np.arange(W), np.arange(H))
 #Defining dx and dy, the horizontal and vertical distance of each image point from the black hole's center.
 dx = X - center_x
