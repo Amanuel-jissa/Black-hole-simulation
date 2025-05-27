@@ -12,13 +12,13 @@ One of the most Impresive effects of black holes on space is Gravitational lensi
 curve the spacetime around them, causing light to bend. The amount of deflection that a black hole causes on a light can be considered using the angle $\alpha$- also called deflection. The deflection 
 angle for light passing near a Schwarzschild black hole is given by:
 
-$ \alpha = \frac{4GM}{c^2r} $
+$$ \alpha = \frac{4GM}{c^2r} $$
 
 where:  $ G$ is the gravitational constant, $ M$ is the mass of the black hole, $ c$ is the speed of light, $ r$ is the impact parameter (the closest distance light gets to the black hole). 
 
 In our simulation, we approximate this deflection for a pixel at position $(x, y)$ as:
 
-$ \alpha = \frac{4M}{r},$
+$$\alpha = \frac{4M}{r}$$
 
 and adjust the pixel’s coordinates accordingly to simulate the bending of light.
 # Python Implementation
@@ -38,6 +38,6 @@ Our simulation needs a couple of additional mathematical and computational work 
 
 For a more mathematically realistic simulation, we would need ray tracing methods, solving the full geodesic equation:
 
-$ \frac{d^2x^\mu}{d\tau^2}+\Gamma^\mu_{\alpha \beta}\frac{dx^\alpha}{d\tau}\frac{x^\beta}{d\tau}=0$
+$$ \frac{d^2x^\mu}{d\tau^2}+\Gamma^\mu_{\alpha \beta}\frac{dx^\alpha}{d\tau}\frac{x^\beta}{d\tau}=0$$
 
 where $ \Gamma^\mu_{\alpha \beta}$ are Christoffel symbols from General Relativity.
